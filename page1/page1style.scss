@@ -46,7 +46,11 @@ nav{
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin: auto 30px auto auto;
+        a{
+            margin: auto;
     }
+}   
 }
 
 .accountInfoWrapper{

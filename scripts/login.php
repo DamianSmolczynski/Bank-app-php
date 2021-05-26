@@ -34,7 +34,16 @@
            $_SESSION['phone'] = $user_pool['phone'];
            $_SESSION['terms'] = $user_pool['terms'];
            $_SESSION['fname'] = $user_pool['fname'];
-        
+           if($db_data = @$connection->query(sprintf("SELECT * FROM accounts WHERE userId='%s'", mysqli_real_escape_string($connection,$user_pool["id"])))){
+                $db_pool = $db_data->fetch_assoc();
+                $_SESSION['acId'] = $db_pool['acId'];
+                $_SESSION['acNumber'] = $db_pool['acNumber'];
+                $_SESSION['acBalance'] = $db_pool['acBalance'];
+                $_SESSION['acDebit'] = $db_pool['acDebit'];
+                $_SESSION['currency'] = $db_pool['currency'];
+           } else {
+               header('Location: https://super-cut.co.uk');
+           }
            
            
            $_SESSION['user_active'] = true;

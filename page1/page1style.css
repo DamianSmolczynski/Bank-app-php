@@ -64,6 +64,11 @@ nav .userArea {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin: auto 30px auto auto;
+}
+
+nav .userArea a {
+  margin: auto;
 }
 
 .accountInfoWrapper {

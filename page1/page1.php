@@ -22,7 +22,6 @@
       <li><a href="">Settings</a></li>
     </ul>
     <div class="userArea">
-      <?php echo $_SESSION['fname']." ".$_SESSION['surname']; ?>
       <a href="../scripts/logout.php">Wyloguj się</a>
     </div>
     </nav>
@@ -30,31 +29,31 @@
       <div class="col ac">
         <div class="accountInfo">
           <div>Bank AC Number:</div>
-          <?php echo '<div>'.$_SESSION['id'].'</div>'; ?>
+          <?php echo '<div>'.$_SESSION['acNumber'].'</div>'; ?>
         </div>
       </div>
       <div class="col history">
         <div class="summaryWrapper">
           <div class="child">
             <div>Bank AC Number:</div>
-            <?php echo '<div>'.$_SESSION['id'].'</div>'; ?>
+            <?php echo '<div>'.$_SESSION['acNumber'].'</div>'; ?>
             <div>
               <div>Currency: </div>
-              <div>GBP</div>
+              <?php echo '<div>'.$_SESSION['currency'].'</div>'; ?>
             </div>
             <div>
-              <div>Name</div>
-              <div>Surname</div>
+            <?php echo '<div>'.$_SESSION['fname'].'</div>'; ?>
+            <?php echo '<div>'.$_SESSION['surname'].'</div>'; ?>
             </div>
           </div>
           <div class="child">
             <div>
               <div>Balance: </div>
-              <div>7.003</div>
+              <?php echo '<div>'.$_SESSION['acBalance'].'</div>'; ?>
             </div>
             <div>
               <div>Avilable balance: </div>
-              <div>6.890</div>
+              <?php echo '<div>'.$_SESSION['acBalance']-$_SESSION['acDebit'].'</div>'; ?>
             </div>
           </div>
         </div>
