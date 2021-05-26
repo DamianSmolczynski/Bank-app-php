@@ -1,0 +1,45 @@
+$formElementsWidth : 338px;
+form{
+    @include dimensions(375px,auto);
+    display: flex;
+    flex-direction: column;
+    input{
+        @include dimensions(330px,44px);
+        display: block;
+        margin: 0 auto 15px auto;
+        border: 1px black solid;
+    }
+    
+    div.labelWrapper{
+        @include dimensions($formElementsWidth,auto);
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+
+        label.first{
+            @extend %labels-props;
+            margin-left: 0px;}
+
+        label.second{
+            @extend %labels-props;
+            text-align: right;
+            margin-right: 0px;}
+    }
+    label{
+        @include dimensions($formElementsWidth,auto);
+        margin: auto;}
+    
+    
+    button{
+        @include dimensions($formElementsWidth,30px);
+        margin: 15px auto 40px auto;
+        background-color: $linksColor;
+        border: none;
+        border-radius: 20px;
+        color: white;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    
+}
