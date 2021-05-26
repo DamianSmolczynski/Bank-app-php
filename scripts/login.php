@@ -27,13 +27,14 @@
        $user_count = $result->num_rows;
        if($user_count == 1){
            $user_pool = $result->fetch_assoc();
+           $_SESSION['id'] = $user_pool['id'];
            $_SESSION['user'] = $user_pool['user'];
            $_SESSION['password'] = $user_pool['pass'];
            $_SESSION['surname'] = $user_pool['surname'];
            $_SESSION['phone'] = $user_pool['phone'];
            $_SESSION['terms'] = $user_pool['terms'];
            $_SESSION['fname'] = $user_pool['fname'];
-
+        
            
            
            $_SESSION['user_active'] = true;

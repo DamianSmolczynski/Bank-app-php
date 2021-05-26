@@ -1,0 +1,150 @@
+* {
+  text-decoration: none;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+}
+
+nav .navlogo {
+  width: auto;
+  height: 40px;
+  margin: auto auto auto 20px;
+}
+
+nav ul {
+  width: 400px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav ul li {
+  width: 70px;
+  height: inherit;
+  text-decoration: none;
+  text-align: center;
+  margin: auto auto auto 30px;
+  line-height: 40px;
+}
+
+nav .userArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.accountInfoWrapper {
+  width: 90%;
+  height: auto;
+  margin: 70px auto auto auto;
+  background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.ac {
+  width: 300;
+  height: 200;
+  background-color: aqua;
+  margin: 30px auto auto 30px;
+}
+
+.ac .accountInfo {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.history {
+  width: 600;
+  height: auto;
+  background-color: aqua;
+  margin: 30px auto auto 30px;
+}
+
+.summaryWrapper {
+  width: 100%;
+  height: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.summaryWrapper .child {
+  width: 50%;
+  height: inherit;
+  margin: 0;
+  background-color: brown;
+}
+
+.quickActions {
+  width: 100%;
+  height: 100px;
+  background-color: black;
+}
+
+.accountTransactions {
+  width: 100%;
+  height: 4040px;
+  background-color: pink;
+}
+
+.accountTransactions .transactionsContainer {
+  width: 100%;
+  height: auto;
+}
+
+.accountTransactions .transactionsContainer .transaction {
+  width: 100%;
+  height: 200px;
+  background-color: chocolate;
+}
+/*# sourceMappingURL=page1style.css.map */

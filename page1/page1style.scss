@@ -1,0 +1,100 @@
+$textColor: black;
+@mixin dimensions($width,$height){
+    width:$width;
+    height: $height;
+}
+    *{
+        text-decoration: none;
+        color : $textColor;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }  
+body{
+    @include dimensions(100%,auto );
+    margin: 0 auto;
+}
+nav{
+    @include dimensions(100%,70px);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+    .navlogo{
+        @include dimensions(auto, 40px);
+        margin: auto auto auto 20px;
+    }
+    ul{
+        @include dimensions(400px,40px);
+        display: flex;
+        flex-direction: row;
+        margin:auto;
+        text-decoration: none;
+        list-style: none;
+
+        li{
+            @include dimensions(70px,inherit);
+            text-decoration: none;
+            text-align: center;
+            margin: auto auto auto 30px;
+            line-height: 40px;
+        }
+    }
+    .userArea{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.accountInfoWrapper{
+    @include dimensions(90%, auto);
+    margin: 70px auto auto auto;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+}
+.ac{
+    @include dimensions(300,200);
+    background-color: aqua;
+    margin: 30px auto auto 30px;
+    .accountInfo{
+        @include dimensions(100%,100%);
+        display: flex;
+        flex-direction: column;
+    }
+}
+.history{
+    @include dimensions(600,auto);
+    background-color: aqua;
+    margin: 30px auto auto 30px;
+}
+.summaryWrapper{
+    @include dimensions(100%,300);
+    display: flex;
+    flex-direction: row;
+    .child{
+        @include dimensions(50%,inherit);
+        margin: 0;
+        background-color: brown;
+    }
+}
+.quickActions{
+    @include dimensions(100%,100px);
+    background-color:black;
+    
+}
+.accountTransactions{
+    @include dimensions(100%,4040px);
+    background-color:pink;
+    .transactionsContainer{
+        @include dimensions(100%,auto);
+        .transaction{
+            @include dimensions(100%,200px );
+            background-color: chocolate;
+        }
+    }
+}
+ 
