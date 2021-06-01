@@ -1,7 +1,7 @@
 <?php
   session_start();
   
-  if($_SESSION['user_active']==true){
+  if((isset($_SESSION['user_active'])) && ($_SESSION['user_active']==true)){
       header('Location: ./page1/page1.php');
   }
 ?>
@@ -35,7 +35,7 @@
         </form>
     
     <div class = "singUpWrapper">
-        <p>New to BankApp? <a href="github.com">Sing up</a></p>
+        <p>New to BankApp? <a href="./signup/signup.php">Sing up</a></p>
     </div>
     <div class="footerLinks">
         <a href="http://olx.pl">Security</a><a href="http://youtube.com">FAQ</a><a href="http://google.com">Contact us</a>

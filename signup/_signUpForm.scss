@@ -1,0 +1,45 @@
+$formElementsWidth : 330px;
+
+body:first-child{
+    margin: auto;
+}
+form{
+    @include dimensions(375px,auto);
+    display: flex;
+    flex-direction: column;
+    input{
+        @include dimensions(330px,30px);
+        display: block;
+        margin: 0 auto 15px auto;
+        border: 1px black solid;
+    }
+    input.checkbox1{
+        @include dimensions(25px,25px);
+        margin: {
+            top: 10px;}
+    }
+    label{
+        @include dimensions($formElementsWidth,auto);
+        margin: auto;}
+    label.acceptTerms{
+        @include dimensions(auto,auto)
+    }
+    .g-recaptcha{
+        margin: {
+            left:auto;
+            right: auto;
+        }
+    }
+    
+    button{
+        @include dimensions($formElementsWidth,30px);
+        margin: 15px auto 40px auto;
+        background-color: $linksColor;
+        border: none;
+        border-radius: 20px;
+        color: white;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,113 @@
+body:first-child {
+  margin: auto;
+}
+
+form {
+  width: 375px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form input {
+  width: 330px;
+  height: 30px;
+  display: block;
+  margin: 0 auto 15px auto;
+  border: 1px black solid;
+}
+
+form input.checkbox1 {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+form label {
+  width: 330px;
+  height: auto;
+  margin: auto;
+}
+
+form label.acceptTerms {
+  width: auto;
+  height: auto;
+}
+
+form .g-recaptcha {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form button {
+  width: 330px;
+  height: 30px;
+  margin: 15px auto 40px auto;
+  background-color: #2d1888;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+* {
+  text-decoration: none;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #2d1888;
+  font-size: 16px;
+}
+
+.signUpArea {
+  width: 375px;
+  height: 600px;
+  margin: auto;
+}
+
+.singUpWrapper {
+  width: 330px;
+  height: auto;
+  margin: auto auto 30px auto;
+  height: 60px;
+  border: solid black 0.5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+}
+
+.singUpWrapper p {
+  text-align: center;
+}
+
+.footerLinks {
+  width: 240px;
+  height: auto;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footerLinks a {
+  width: 33%;
+  text-align: center;
+}
+/*# sourceMappingURL=signup.css.map */

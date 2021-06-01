@@ -15,6 +15,13 @@ $textColor: black;
 body{
     @include dimensions(100%,auto );
     margin: 0 auto;
+    .wrapper{
+        background-image: url(./background.webp);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: -10;
+    }
 }
 nav{
     @include dimensions(100%,70px);
@@ -56,13 +63,12 @@ nav{
 .accountInfoWrapper{
     @include dimensions(90%, auto);
     margin: 70px auto auto auto;
-    background-color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: row;
 }
 .ac{
     @include dimensions(300,200);
-    background-color: aqua;
     margin: 30px auto auto 30px;
     .accountInfo{
         @include dimensions(100%,100%);
@@ -72,33 +78,85 @@ nav{
 }
 .history{
     @include dimensions(600,auto);
-    background-color: aqua;
+    
     margin: 30px auto auto 30px;
 }
 .summaryWrapper{
     @include dimensions(100%,300);
     display: flex;
     flex-direction: row;
+   
     .child{
         @include dimensions(50%,inherit);
         margin: 0;
-        background-color: brown;
+        
+        
     }
 }
 .quickActions{
     @include dimensions(100%,100px);
-    background-color:black;
+    
+    display: flex;
+    button{
+        @include dimensions(100px,40px );
+        margin: 0 auto auto auto;
+        border: none;
+        background-color: rgb(0, 0, 0);
+        border-radius: 25px;
+        color: white;
+
+    }
     
 }
 .accountTransactions{
     @include dimensions(100%,4040px);
-    background-color:pink;
+    
+    .header{
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 0.5);
+        
+        
+        :first-child{
+            @include dimensions(20%,50px);
+        }
+        :last-child{
+            @include dimensions(20%,50px );
+        }
+        div{
+            @include dimensions(60%,50px);
+            line-height: 50px;
+            text-align: center;
+            border: 1px white solid;
+            border-collapse: collapse;
+            
+
+        }
+    }
     .transactionsContainer{
         @include dimensions(100%,auto);
         .transaction{
             @include dimensions(100%,200px );
-            background-color: chocolate;
+            
+            background-color: rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-direction: row;
+            :first-child{
+                @include dimensions(20%,200px);
+            }
+            :last-child{
+                @include dimensions(20%,200px );
+            }
+            div{
+                @include dimensions(60%,200px);
+                line-height: 200px;
+                text-align: center;
+                border: 1px white solid;
+                border-collapse: collapse;
+                color: white;
+
+            }
         }
-    }
+}
 }
  

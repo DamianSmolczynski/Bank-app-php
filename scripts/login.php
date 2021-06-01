@@ -19,14 +19,14 @@
      unset($POST);
 
      $login = htmlentities($login,ENT_QUOTES,"UTF-8");
-     $password = htmlentities($password,ENT_QUOTES,"UTF-8");
 
-     if($result = @$connection->query(sprintf("SELECT * FROM users WHERE user='%s' AND pass='%s'",
+     if($result = @$connection->query(sprintf("SELECT * FROM users WHERE user='%s'",
      mysqli_real_escape_string($connection,$login),
-     mysqli_real_escape_string($connection,$password)))){
+     ))){
        $user_count = $result->num_rows;
        if($user_count == 1){
            $user_pool = $result->fetch_assoc();
+           if(password_verify($password,$user_pool['pass'])) {
            $_SESSION['id'] = $user_pool['id'];
            $_SESSION['user'] = $user_pool['user'];
            $_SESSION['password'] = $user_pool['pass'];
@@ -44,6 +44,10 @@
            } else {
                header('Location: https://super-cut.co.uk');
            }
+        }
+         else {
+             echo "error";
+         }
            
            
            $_SESSION['user_active'] = true;

@@ -14,6 +14,8 @@
   <title>Document</title>
 </head>
 <body>
+  <div class="wrapper">
+  </div>
   <nav>
     <img src="./navLogo.png" alt="" class="navlogo">
     <ul>
@@ -28,31 +30,32 @@
     <div class="accountInfoWrapper">
       <div class="col ac">
         <div class="accountInfo">
-          <div>Bank AC Number:</div>
+          <div><strong> AC Number:</strong></div>
           <?php echo '<div>'.$_SESSION['acNumber'].'</div>'; ?>
         </div>
       </div>
       <div class="col history">
         <div class="summaryWrapper">
           <div class="child">
-            <div>Bank AC Number:</div>
+            <div><strong> AC Number:</strong></div>
             <?php echo '<div>'.$_SESSION['acNumber'].'</div>'; ?>
             <div>
-              <div>Currency: </div>
+              <div><strong>Currency: </strong></div>
               <?php echo '<div>'.$_SESSION['currency'].'</div>'; ?>
             </div>
             <div>
+            <div><strong>AC Holder: </strong></div>
             <?php echo '<div>'.$_SESSION['fname'].'</div>'; ?>
             <?php echo '<div>'.$_SESSION['surname'].'</div>'; ?>
             </div>
           </div>
           <div class="child">
             <div>
-              <div>Balance: </div>
+              <div><strong>Balance: </strong></div>
               <?php echo '<div>'.$_SESSION['acBalance'].'</div>'; ?>
             </div>
             <div>
-              <div>Avilable balance: </div>
+              <div><strong>Avilable balance: </strong></div>
               <?php echo '<div>'.$_SESSION['acBalance']-$_SESSION['acDebit'].'</div>'; ?>
             </div>
           </div>
@@ -64,17 +67,22 @@
         </div>
         <div class="accountTransactions">
           <div class="header">
+            <div>Date</div>
+            <div>Transaction name</div>
+            <div>Amount</div>
 
           </div>
           <div class="transactionsContainer">
             <div class="transaction">
-
+              <div>12/06/2021</div>
+              <div>Amazon.co.uk/Invoice/300</div>
+              <div>9400</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+    
 </body>
 </html>
 
