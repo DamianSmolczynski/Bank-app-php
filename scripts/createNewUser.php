@@ -106,8 +106,23 @@
                 $_SESSION['newLoginErr']="There is already an acoout with provided login";
               }
               if($noErrors==true) {
-                $newID = mt_rand(100000000,999999999);
                 $terms = 1;
+                $loopFlag = true;
+                while($loopFlag == true){
+                $newID = mt_rand(100000000,999999999);
+                
+
+                if($duplicate = $db_connection->query("SELECT * FROM users WHERE id='$newID'")){
+                    $user_count = $duplicate->num_rows;
+                    if($user_count > 0){
+                      $loopFlag = true;
+                    }
+                    else{
+                      $loopFlag = false;
+                    }
+                  }
+                }
+
                 
                 if($db_connection->query("INSERT INTO users VALUES ('$newID','$user','$surname','$phone','$email','$password_hash','$terms','$fname')")) {
                   $_SESSION['singUpSuccess']=true;
