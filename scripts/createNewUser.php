@@ -122,9 +122,30 @@
                     }
                   }
                 }
-
+                $loopFlag = true;
 
                 if($db_connection->query("INSERT INTO users VALUES ('$newID','$user','$surname','$phone','$email','$password_hash','$terms','$fname')")) {
+                  
+                  
+                  while($loopFlag == true){
+                    $newAcNum = mt_rand(10000000000,99999999999);
+                    
+                    if($duplicateAcID = $db_connection->query("SELECT * FROM accounts WHERE acNumber='$newAcNum'")){
+                        $acCount_count = $duplicateAcID->num_rows;
+                        if($acCount_count > 0){
+                          $loopFlag = true;
+                        }
+                        else{
+                          $loopFlag = false;
+                        }
+                      }
+                  }
+                  if($db_connection->query("INSERT INTO accounts VALUES (NULL,'$newID','$newAcNum',0,0,'GBP')")) {
+                    $_SESSION['ACSuccess']=true;
+                  } else {
+                    throw new Exception($db_connection->error);
+                  }
+
                   $_SESSION['signUpSuccess']=true;
                   header("Location: ../index.php");
 
