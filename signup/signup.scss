@@ -32,7 +32,7 @@ a{
     margin: auto;
 }
 
-.singUpWrapper{
+.signUpWrapper{
     @include dimensions($formElementsWidth,auto);
     margin: auto auto 30px auto;
     height: 60px;
@@ -43,6 +43,7 @@ a{
         text-align: center;
     }
 }
+
 .footerLinks{
     @include dimensions($formElementsWidth - 90px,auto);
     margin: auto;
@@ -51,5 +52,10 @@ a{
     a{
         width: 33%;
         text-align: center;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 30px;
+        }
     }
 }

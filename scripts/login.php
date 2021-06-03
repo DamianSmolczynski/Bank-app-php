@@ -46,7 +46,10 @@
            }
         }
          else {
-             echo "error";
+            $_SESSION['user_count_error'] = 1;
+            $_SESSION['user_active'] = false;
+            header('Location: ../index.php');
+            exit();
          }
            
            
@@ -64,6 +67,12 @@
         header('Location: ../index.php');
        }
     }
-}
+    else {
+        unset($_SESSION);
+        unset($_POST);
+        header("Location: ../index.php");
+    }
+
+   }
  $connection->close();
 ?>

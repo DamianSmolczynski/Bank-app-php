@@ -31,8 +31,8 @@
                 <div class="g-recaptcha" data-sitekey="6LcCPgYbAAAAALMhUSalsffkDJxWxCcdPgx_rK5m"></div>
                 <button type="submit" >Sign up</button>
             </form>
-        <div class = "singUpWrapper">
-            <p>Already have an account? <a href="../index.php">Sing Up</a></p>
+        <div class = "signUpWrapper">
+            <p>Already have an account? <a href="../index.php">Sign up</a></p>
         </div>
         <div class="footerLinks">
             <a href="">Security</a>

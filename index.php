@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./singin.css">
+    <link rel="stylesheet" href="./signin.css">
     <title>Document</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
             <label for="password" class="second"><a href='https://google.com'>forgot password?</a></label>
             </div>
             <input type="password" name="password"></input>
-            <button type="submit" >Sing in</button>
+            <button type="submit" >Sign in</button>
             <?php
         if(isset($_SESSION['user_count_error'])){
             if($_SESSION['user_count_error']==1) {echo '<p id="error">Wrong login or password</p>'; $_SESSION['user_count_error']=0;
@@ -34,8 +34,8 @@
     ?>
         </form>
     
-    <div class = "singUpWrapper">
-        <p>New to BankApp? <a href="./signup/signup.php">Sing up</a></p>
+    <div class = "signUpWrapper">
+        <p>New to BankApp? <a href="./signup/signup.php">Sign up</a></p>
     </div>
     <div class="footerLinks">
         <a href="http://olx.pl">Security</a><a href="http://youtube.com">FAQ</a><a href="http://google.com">Contact us</a>

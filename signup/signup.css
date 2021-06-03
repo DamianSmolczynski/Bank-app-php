@@ -77,7 +77,7 @@ a {
   margin: auto;
 }
 
-.singUpWrapper {
+.signUpWrapper {
   width: 330px;
   height: auto;
   margin: auto auto 30px auto;
@@ -89,7 +89,7 @@ a {
   vertical-align: middle;
 }
 
-.singUpWrapper p {
+.signUpWrapper p {
   text-align: center;
 }
 
@@ -109,5 +109,8 @@ a {
 .footerLinks a {
   width: 33%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=signup.css.map */

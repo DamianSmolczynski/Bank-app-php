@@ -11,7 +11,7 @@ $linksFontSize: 16px;
     height: $height;
 }
 
-@import './singInForm';
+@import './signInForm';
 
 *{
     text-decoration: none;
@@ -43,7 +43,7 @@ img.logo{
 
 
 
-.singUpWrapper{
+.signUpWrapper{
     @include dimensions($formElementsWidth,auto);
     margin: auto auto 30px auto;
     height: 60px;

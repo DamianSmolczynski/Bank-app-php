@@ -123,9 +123,9 @@
                   }
                 }
 
-                
+
                 if($db_connection->query("INSERT INTO users VALUES ('$newID','$user','$surname','$phone','$email','$password_hash','$terms','$fname')")) {
-                  $_SESSION['singUpSuccess']=true;
+                  $_SESSION['signUpSuccess']=true;
                   header("Location: ../index.php");
 
                 }

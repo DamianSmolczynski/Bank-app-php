@@ -96,7 +96,7 @@ img.logo {
   margin: 20px auto  40px auto;
 }
 
-.singUpWrapper {
+.signUpWrapper {
   width: 338px;
   height: auto;
   margin: auto auto 30px auto;
@@ -108,7 +108,7 @@ img.logo {
   vertical-align: middle;
 }
 
-.singUpWrapper p {
+.signUpWrapper p {
   text-align: center;
 }
 
@@ -137,4 +137,4 @@ img.logo {
   color: red;
   margin: auto;
 }
-/*# sourceMappingURL=singin.css.map */
+/*# sourceMappingURL=signin.css.map */
