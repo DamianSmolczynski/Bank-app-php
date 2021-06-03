@@ -55,7 +55,7 @@
            
            $_SESSION['user_active'] = true;
            $result->close();
-           header('Location: ../page1/page1.php');
+           header('Location: ./transactions.php');
        }
        else if($user_count>1){
            echo "Critical data base error";

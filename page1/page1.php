@@ -4,6 +4,8 @@
       header('Location: ../scripts/logout.php');
   }
 
+
+
 ?>
 <html lang="en">
 <head>
@@ -74,9 +76,15 @@
           </div>
           <div class="transactionsContainer">
             <div class="transaction">
-              <div>12/06/2021</div>
-              <div>Amazon.co.uk/Invoice/300</div>
-              <div>9400</div>
+              <?php 
+              
+                if(isset($_SESSION['tDate'])){
+                  echo "<div>".$_SESSION['tDate']."</div>";
+                  echo "<div>".$_SESSION['tName']."</div>";
+                  echo "<div>".$_SESSION['tAmmount']."</div>";
+                }
+                
+              ?>
             </div>
           </div>
         </div>
